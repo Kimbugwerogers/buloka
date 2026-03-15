@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Places</title>
+  <link rel="stylesheet" href="styles.css">
+  
+  <body id="index">
+    <header>
+      <h1>BULOKA</h1>
+      <input id="search" placeholder="Search places..." />
+    </header>
+
+    <main id="places-container">Loading places</main>
+
+    <script src="app.js"></script> 
+
+    <footer>
+      <a href="addplace.html" class="link">Add place</a>
+      <button id="adminBtn" class="btn">Admin Login</button>
+    </footer>
+
+    <script>
+      document.getElementById('search').addEventListener('input', async (e)=>{
+        await renderFrontPage(e.target.value);
+      });
+      document.getElementById('adminBtn').addEventListener('click', ()=>{
+        location.href = 'approval.html';
+      });
+    </script>
+  </body>
+</head>
+</html>

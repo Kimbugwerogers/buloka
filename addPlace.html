@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rental</title>
+  <link rel="stylesheet" href="styles.css">
+  
+
+  <body id="add-place-section">
+    <header>
+      <h2 id="place-name">Add Rental</h2>
+    </header>
+
+    <form id="place-form">
+      <input type ="text" id="managerName" placeholder="Manager Name" required>
+      <input type ="number" id="managerContact" placeholder="Manger Contact" required>
+      <input type ="text" id="placeName" placeholder="Place Name" required>
+      <input type ="text" id="locationName" placeholder="Location Name" required>
+      <input type ="number" id="ratingNumber" placeholder="Rating Number" required>
+      
+      <button type="submit">Save Place</button>
+    </form>
+
+      <div class="actions">
+        <a id="contactBtn" class="btn link">Contact Us</a>
+        <a href="index.html" class="btn link">Back</a>
+      </div>
+      
+      <script src="app.js" defer></script>
+  </body>
+</head>
+</html>
