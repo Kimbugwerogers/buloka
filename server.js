@@ -2,7 +2,7 @@ const express = require('express');
 const mysql = require('mysql2');
 const app = express();
 //const port = 3000;
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 19152;
 app.listen(PORT,()=>{
   console.log(`Server running on port ${PORT}`);
 });
@@ -13,10 +13,11 @@ app.listen(PORT,()=>{
 
 // 1. Configure the connection
 const db = mysql.createPool({
-  host: 'localhost',      // WampServer runs on your local machine
-  user: 'root',           // Default WampServer username
-  password: '',           // Default WampServer password is empty
-  database: 'buloka', // The name you chose earlier
+  host: process.env.DB_HOST,      // WampServer runs on your local machine
+  user: process.env.DB_USER,           // Default WampServer username
+  password: process.env.DB_PASSWORD,           // Default WampServer password is empty
+  database: process.env.DB_DATABASE, // The name you chose earlier
+  ssl:{rejectUnauthorized: false} //aiven usually requires ssl
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0
