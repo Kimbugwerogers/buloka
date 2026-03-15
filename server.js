@@ -17,7 +17,7 @@ const db = mysql.createPool({
   user: process.env.DB_USER,           // Default WampServer username
   password: process.env.DB_PASSWORD,           // Default WampServer password is empty
   database: process.env.DB_DATABASE, // The name you chose earlier
-  ssl:{rejectUnauthorized: false} //aiven usually requires ssl
+  ssl:{rejectUnauthorized: false}, //aiven usually requires ssl
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0
